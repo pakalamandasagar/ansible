@@ -2,13 +2,13 @@
   hosts: localhost
   vars_files:
   - variables.yaml
-  vars_prompt:
-  - name: PERSON
-    prompt: please enter your name
-    private: false # user can see what they are entering
-  - name: WISHES
-    prompt: please enter your wishes
-    private: false # user can't see what they are entering
+  # vars_prompt:
+  # - name: PERSON
+  #   prompt: please enter your name
+  #   private: false # user can see what they are entering
+  # - name: WISHES
+  #   prompt: please enter your wishes
+  #   private: false # user can't see what they are entering
   vars:
     PERSON: "Siva from PLAY"
     WISHES: "Morning from PLAY"
@@ -19,3 +19,8 @@
     #   WISHES: "Morning from TASK"
     ansible.builtin.debug:
       msg: "Hello {{PERSON}}, Good {{WISHES}}"
+
+#1. CMD
+#2. task
+#3. File
+#4. prompt
